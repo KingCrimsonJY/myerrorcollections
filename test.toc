@@ -1,0 +1,5 @@
+\contentsline {chapter}{\numberline {1}函数}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}错题归纳}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}答案解析}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}数列}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}test}{3}{section.2.1}%

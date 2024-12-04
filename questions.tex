@@ -1,0 +1,22 @@
+% questions.tex
+\newcommand{\question}[2]{#1} % 定义原题命令
+\newcommand{\answer}[2]{#2}   % 定义答案命令
+
+% 示例题目
+\newcommand{\qone}{
+    \question{题目 1：以下哪个选项是对的？\\
+    A. 选项1\\
+    B. 选项2\\
+    C. 选项3\\
+    D. 选项4}
+    {\question{题目 1：以下哪个选项是对的？\\
+    A. 选项1\\
+    \textcolor{blue}{\textbf{B. 选项2}}\\
+    C. 选项3\\
+    D. 选项4}}
+}
+
+\newcommand{\qtwo}{
+    \question{题目 2：$x^2 + y^2 = ?$}
+    {\question{题目 2：$x^2 + y^2 = $\textcolor{red}{4}}}
+}

@@ -1,0 +1,63 @@
+\documentclass[UTF8]{book}
+\usepackage{graphicx}
+\usepackage{CTEX}
+\usepackage{subfiles}
+\usepackage[top=25mm, bottom=20mm, left=30mm, right=30mm,a4paper]{geometry} % 页面布局
+\usepackage{fancyhdr} % 页眉页脚
+\usepackage{titlesec} % 章节标题样式
+\usepackage{tocloft} % 目录样式
+\usepackage{hyperref} % 实现超链接
+
+% 设置超链接颜色，去除红框
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black,
+    hidelinks % 隐藏链接边框
+}
+
+\renewcommand{\chaptermark}[1]{%
+ \markboth{#1}{}}
+
+% 设置页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{第 \thechapter 章\hspace{1em}\chaptermark{}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% 设置章节标题样式
+\titleformat{\chapter}
+  {\normalfont\large\bfseries\centering}{第 \thechapter 章}{1em}{}
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{1em}{}
+
+% 设置目录样式
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecfont}{\bfseries}
+
+
+
+\graphicspath{{contents/images/}}
+
+
+\title{错题集}
+\author{谢晨晖}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    
+
+    \newpage % 确保目录页独立占一页
+    \tableofcontents
+    \setcounter{page}{0}
+    \thispagestyle{empty}
+
+
+    \subfile{contents/chp-01} 
+    \subfile{contents/chp-02} 
+\end{document}

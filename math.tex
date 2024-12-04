@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+
+% 定义按钮样式
+\tikzset{
+  md3button/.style={
+    rectangle,
+    rounded corners=5pt,
+    minimum width=2cm,
+    minimum height=0.8cm,
+    draw=white,
+    fill=green!70!black,
+    font=\sffamily\bfseries,
+    text=white,
+    align=center
+%    drop shadow={blur shadow, shadow xshift=0.5ex, shadow yshift=-0.5ex, fill=black, opacity=0.3},
+  }
+}
+
+\begin{document}
+
+% 定义目标位置
+\hypertarget{section1}{Section 1}
+
+\begin{tikzpicture}
+  \node[md3button, hyperref={linktocpage=true, pageanchor=false}] (button) {\hyperlink{section2}{Go to Section 2}};
+\end{tikzpicture}
+
+\newpage
+
+\section{Section 2}
+\hypertarget{section2}{This is Section 2.}
+\begin{tikzpicture}
+    \node[md3button, hyperref={linktocpage=true, pageanchor=false}] (button) {\hyperlink{section1}{back to section1}};
+  \end{tikzpicture}
+
+\end{document}
